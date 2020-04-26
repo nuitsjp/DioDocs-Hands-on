@@ -28,11 +28,11 @@ namespace HelloTemplate
             dataTable.Load(command.ExecuteReader());
 
             var workbook = new Workbook();
-            workbook.Open("Invoice.xlsx");
+            workbook.Open("Template.xlsx");
             workbook.AddDataSource("Invoice", dataTable);
             workbook.ProcessTemplate();
 
-            workbook.Save("AppliedTemplate.pdf", SaveFileFormat.Pdf);
+            workbook.Save("Invoice.pdf", SaveFileFormat.Pdf);
         }
     }
 }
